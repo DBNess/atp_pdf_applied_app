@@ -21,10 +21,12 @@ end
 gem 'jquery-rails'
 
 gem 'devise'
+gem 'omniauth-twitter'
+gem 'twitter'
 
 # ActiveAdmin & dependencies
 gem 'activeadmin'
-gem "meta_search",	'>= 1.1.0.pre'
+gem 'meta_search'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

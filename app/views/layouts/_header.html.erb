@@ -1,0 +1,21 @@
+<div id="global_header">
+  <div class="container">
+    <h1>
+      <%= link_to root_url, :id => "logo" do %>
+        <%= image_tag "atp_logo_75.jpg", :alt => "Agree The People" %>
+      <% end %>
+    </h1>
+    <h1>Agree the People</h1>
+  </div>
+  <div id="nav">
+    <ul>
+      <% if user_signed_in? %>
+        <li><%= link_to "My Dashboard", root_path, :class => "profile"  %></li>
+        <li><%= link_to "Sign Out", destroy_user_session_path %></li>
+      <% else %>
+        <li><%= link_to "Sign In", user_omniauth_authorize_path(:twitter), :class => "sign_in" %></li>
+        <li><%= link_to "Sign Up", user_omniauth_authorize_path(:twitter), :class => "sign_up button" %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
